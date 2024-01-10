@@ -1,0 +1,17 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.title {
+  color: black;
+}
+.navbar {
+  color: white;
+}
+.nav-items {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}

@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: small;
+  font-weight: 200;
+}
+
+.summaryList {
+  list-style: none;
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: Inter, sans-serif;
+}
+.summary1 {
+  margin-top: 10px;
+}
+h2 {
+  font-weight: 400;
+}
+@media only screen and (max-width: 767px) {
+  .summaryList {
+    font-size: 18px;
+  }
+}

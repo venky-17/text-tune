@@ -1,0 +1,58 @@
+body {
+  height: 100vh;
+  font-family: Inter, sans-serif;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  min-width: 80%;
+  font-size: 22px;
+  font-weight: 200;
+  font-family: Inter, sans-serif;
+}
+.operations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  align-items: center;
+  gap: 10px;
+  margin: 20px 50px 0 50px;
+}
+.operation {
+  padding: 10px 20px;
+  font-family: Inter, sans-serif;
+  background-color: #fffcdc;
+  font-size: 24px;
+  border: none;
+
+  font-weight: 200;
+}
+h1 {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  textarea {
+    font-size: 18px;
+  }
+  .operations {
+    margin: 10px 10px 0 10px;
+
+    gap: 5px;
+  }
+  .operation {
+    padding: 6px 10px;
+    margin: 5px;
+    font-size: 18px;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 26px;
+  }
+}
