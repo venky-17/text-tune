@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import "../CSS/Home.css";
 import ResultContext from "./ResultContext";
 
