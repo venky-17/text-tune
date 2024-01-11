@@ -5,6 +5,7 @@ body {
 }
 .title {
   color: black;
+  text-decoration: line-through;
 }
 .navbar {
   color: white;

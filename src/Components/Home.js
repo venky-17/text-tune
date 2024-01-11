@@ -1,6 +1,8 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import "../CSS/Home.css";
 import ResultContext from "./ResultContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const { input, setInput: setResultInput } = useContext(ResultContext);
@@ -11,10 +13,18 @@ const Home = () => {
 
   const toUpperCase = () => {
     setResultInput((prevText) => prevText.toUpperCase());
+    toast.success("Converted to UpperCase", {
+      autoClose: 1000,
+      closeOnClick: true,
+    });
   };
 
   const toLowerCase = () => {
     setResultInput((prevText) => prevText.toLowerCase());
+    toast.success("Converted to LowerCase", {
+      autoClose: 1000,
+      closeOnClick: true,
+    });
   };
 
   const toTitleCase = () => {
@@ -31,6 +41,10 @@ const Home = () => {
     });
 
     setResultInput(titleCaseArray.join("\n"));
+    toast.success("Converted to TitleCase", {
+      autoClose: 1000,
+      closeOnClick: true,
+    });
   };
   const toCamelCase = () => {
     const linesArray = input.split("\n");
@@ -47,10 +61,18 @@ const Home = () => {
     });
 
     setResultInput(camelCaseArray.join("\n"));
+    toast.success("Converted to CamelCase", {
+      autoClose: 1000,
+      closeOnClick: true,
+    });
   };
 
   const deleteExtraSpaces = () => {
     setResultInput(input.replace(/\s+/g, " ").trim());
+    toast.info("Deleted Extra Spaces", {
+      autoClose: 1000,
+      closeOnClick: true,
+    });
   };
 
   const copyToCB = () => {
@@ -62,6 +84,10 @@ const Home = () => {
       .catch((err) => {
         console.log(err);
       });
+    toast.info("Copied to Clipboard", {
+      autoClose: 1000,
+      closeOnClick: true,
+    });
   };
 
   const downloadFile = () => {
@@ -74,6 +100,10 @@ const Home = () => {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    toast.success("Downloaded Successfully", {
+      autoClose: 1000,
+      closeOnClick: true,
+    });
   };
 
   return (
